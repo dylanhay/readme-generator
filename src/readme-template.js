@@ -1,38 +1,38 @@
 const generateReadMe = (title, description, install, usage, contribution, test, github, email) => {
   return `
-    # ${title}
+# ${title}
 
-    ## Table of Contents
-    * Description
-    * License
-    * Installation Instructions
-    * Usage Information
-    * Contribution Guidelines
-    * Test Instructions
-    * Questions
+## Table of Contents
+* Description
+* License
+* Installation Instructions
+* Usage Information
+* Contribution Guidelines
+* Test Instructions
+* Questions
     
-    ## Description
-    ${description}
+## Description
+${description}
 
-    ## License
-    
+## License
 
-    ## Installation Instructions
-    ${install}
 
-    ## Usage Information
-    ${usage}
+## Installation Instructions
+${install}
 
-    ## Contribution Guidelines
-    ${contribution}
+## Usage Information
+${usage}
 
-    ## Test Instructions
-    ${test}
+## Contribution Guidelines
+${contribution}
 
-    ## Questions?
-    Feel free to view my GitHub profile and contact me via email for any additional questions!
-    ${github}
-    ${email}
+## Test Instructions
+${test}
+
+## Questions?
+Feel free to view my GitHub profile and contact me via email for any additional questions!
+${github}
+${email}
     `;
 };
 
