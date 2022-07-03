@@ -1,18 +1,38 @@
-const generateReadMe = (title, purpose, language, link, name) => {
+const generateReadMe = (title, description, install, usage, contribution, test, github, email) => {
   return `
     # ${title}
 
-    ## Purpose
-    ${purpose}
+    ## Table of Contents
+    * Description
+    * License
+    * Installation Instructions
+    * Usage Information
+    * Contribution Guidelines
+    * Test Instructions
+    * Questions
+    
+    ## Description
+    ${description}
 
-    ## Built With
-    * ${language}
+    ## License
+    
 
-    ## Link
-    ${link}
+    ## Installation Instructions
+    ${install}
 
-    ## Contribution
-    Made with ❤️ by ${name}
+    ## Usage Information
+    ${usage}
+
+    ## Contribution Guidelines
+    ${contribution}
+
+    ## Test Instructions
+    ${test}
+
+    ## Questions?
+    Feel free to view my GitHub profile and contact me via email for any additional questions!
+    ${github}
+    ${email}
     `;
 };
 
