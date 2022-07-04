@@ -1,12 +1,14 @@
-const fs = require('fs');
-const generateReadMe = require('./src/readme-template.js');
+const inquirer = require('inquirer');
 
-const profileDataArgs = process.argv.slice(2);
+// const fs = require('fs');
+// const generateReadMe = require('./src/readme-template.js');
 
-const [title, description, install, usage, contribution, test, github, email] = profileDataArgs;
+// const profileDataArgs = process.argv.slice(2);
 
-fs.writeFile('./README-new.md', generateReadMe(title, description, install, usage, contribution, test, github, email), err => {
-  if (err) throw new Error(err);
+// const [title, description, install, usage, contribution, test, github, email] = profileDataArgs;
 
-  console.log('README.md complete! Check out README-new.md to see the output!');
-});
+// fs.writeFile('./README-new.md', generateReadMe(title, description, install, usage, contribution, test, github, email), err => {
+//   if (err) throw new Error(err);
+
+//   console.log('README.md complete! Check out README-new.md to see the output!');
+// });

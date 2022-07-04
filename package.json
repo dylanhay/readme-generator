@@ -1,0 +1,25 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "Generates professional README Markdown file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylanhay/readme-generator.git"
+  },
+  "author": "Dylan Hay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dylanhay/readme-generator/issues"
+  },
+  "homepage": "https://github.com/dylanhay/readme-generator#readme",
+  "keywords": [
+    "README"
+  ],
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
