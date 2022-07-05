@@ -1,17 +1,17 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateReadMe = require('./src/readme-template.js');
-const mockData = {
-  title: 'proj1',
-  description: 'desc1',
-  install: 'inst1',
-  usage: 'use1',
-  contribution: 'cont1',
-  test: 'test1',
-  license: [ 'ISC' ],
-  github: 'gitty',
-  email: 'emmy'
-}
+// const mockData = {
+//   title: 'proj1',
+//   description: 'desc1',
+//   install: 'inst1',
+//   usage: 'use1',
+//   contribution: 'cont1',
+//   test: 'test1',
+//   license: [ 'ISC' ],
+//   github: 'gitty',
+//   email: 'emmy'
+// }
 
 
 const promptProject = (readmeData) => {
@@ -144,10 +144,10 @@ const promptProject = (readmeData) => {
   promptProject()
     .then(readmeData => {
       const pageREADME = generateReadMe(readmeData);
-      fs.writeFile('./README.md', pageREADME, err => {
+      fs.writeFile('./README-new.md', pageREADME, err => {
         if (err) throw new Error(err);
   
-        console.log('Page created! Check out README.md in this directory to see it!');
+        console.log('Page created! Check out README-new.md in this directory to see it!');
     
       });
 });
