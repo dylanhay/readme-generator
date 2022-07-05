@@ -138,18 +138,16 @@ const promptProject = (readmeData) => {
           },
         
       ])
-      // .then((projectData) => {
-      //   readmeData.push(projectData);
-      // });
+
   };
   
   promptProject()
     .then(readmeData => {
       const pageREADME = generateReadMe(readmeData);
-      fs.writeFile('./README-new.md', pageREADME, err => {
+      fs.writeFile('./README.md', pageREADME, err => {
         if (err) throw new Error(err);
   
-        console.log('Page created! Check out index.html in this directory to see it!');
-        console.log(readmeData);
+        console.log('Page created! Check out README.md in this directory to see it!');
+    
       });
 });

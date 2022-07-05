@@ -7,8 +7,8 @@ return `
 # ${templateData.title}
 
 # Table of Contents
-* [Description] (#description)
-* License
+[Description] (#description)
+* [License] (#license)
 * Installation Instructions
 * Usage Information
 * Contribution Guidelines
