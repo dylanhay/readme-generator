@@ -6,34 +6,34 @@ module.exports = templateData => {
 return `
 # ${templateData.title}
 
-# Table of Contents
-[Description] (#description)
-* [License] (#license)
-* Installation Instructions
-* Usage Information
-* Contribution Guidelines
-* Test Instructions
-* Questions
+## Table of Contents
+* [Description](#description)
+* [License](#license)
+* [Installation Instructions](#installation-instructions)
+* [Usage Information](#usage-information)
+* [Contribution Guidelines](#contribution-guidelines)
+* [Test Instructions](#test-instructions)
+* [Questions](#questions)
     
-## Description
+### Description
 ${templateData.description}
 
-## License
+### License
 
 
-## Installation Instructions
+### Installation Instructions
 ${templateData.install}
 
-## Usage Information
+### Usage Information
 ${templateData.usage}
 
-## Contribution Guidelines
+### Contribution Guidelines
 ${templateData.contribution}
 
-## Test Instructions
+### Test Instructions
 ${templateData.test}
 
-## Questions?
+### Questions
 Feel free to view my GitHub profile and contact me via email for any additional questions!
 ${templateData.github}
 ${templateData.email}
