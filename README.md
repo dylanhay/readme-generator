@@ -1,7 +1,7 @@
 # Professional README Generator
 
 ## Purpose
-A website that generates random passwords based on user specified criteria.
+A website that generates a professional README based on user specified criteria.
 
 ## Built With
 * Node.js
