@@ -1,6 +1,20 @@
 const inquirer = require('inquirer');
+const fs = require('fs');
+const generateReadMe = require('./src/readme-template.js');
+const mockData = {
+  title: 'proj1',
+  description: 'desc1',
+  install: 'inst1',
+  usage: 'use1',
+  contribution: 'cont1',
+  test: 'test1',
+  license: [ 'ISC' ],
+  github: 'gitty',
+  email: 'emmy'
+}
 
-const promptProject = (portfolioData) => {
+
+const promptProject = (readmeData) => {
     console.log(`
     ==================================================================
     Follow the instructions to generate a professional README.md file
@@ -76,7 +90,15 @@ const promptProject = (portfolioData) => {
         {
             type: "input",
             name: "test",
-            message: "Provide the test instructions",
+            message: "Provide the test instructions (Required)",
+            validate: (nameInput) => {
+              if (nameInput) {
+                return true;
+              } else {
+                console.log("Please enter the test instructions!");
+                return false;
+              }
+            },
         },
         {
           type: "checkbox",
@@ -116,23 +138,18 @@ const promptProject = (portfolioData) => {
           },
         
       ])
+      // .then((projectData) => {
+      //   readmeData.push(projectData);
+      // });
   };
   
   promptProject()
-    .then((portfolioData) => {
-      console.log(portfolioData);
-    });
-
-
-// const fs = require('fs');
-// const generateReadMe = require('./src/readme-template.js');
-
-// const profileDataArgs = process.argv.slice(2);
-
-// const [title, description, install, usage, contribution, test, github, email] = profileDataArgs;
-
-// fs.writeFile('./README-new.md', generateReadMe(title, description, install, usage, contribution, test, github, email), err => {
-//   if (err) throw new Error(err);
-
-//   console.log('README.md complete! Check out README-new.md to see the output!');
-// });
+    .then(readmeData => {
+      const pageREADME = generateReadMe(readmeData);
+      fs.writeFile('./README-new.md', pageREADME, err => {
+        if (err) throw new Error(err);
+  
+        console.log('Page created! Check out index.html in this directory to see it!');
+        console.log(readmeData);
+      });
+});

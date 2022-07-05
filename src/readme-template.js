@@ -1,9 +1,13 @@
-const generateReadMe = (title, description, install, usage, contribution, test, github, email) => {
-  return `
-# ${title}
+module.exports = templateData => {
 
-## Table of Contents
-* Description
+// console.log(templateData);
+// console.log(templateData.title);
+
+return `
+# ${templateData.title}
+
+# Table of Contents
+* [Description] (#description)
 * License
 * Installation Instructions
 * Usage Information
@@ -12,28 +16,28 @@ const generateReadMe = (title, description, install, usage, contribution, test, 
 * Questions
     
 ## Description
-${description}
+${templateData.description}
 
 ## License
 
 
 ## Installation Instructions
-${install}
+${templateData.install}
 
 ## Usage Information
-${usage}
+${templateData.usage}
 
 ## Contribution Guidelines
-${contribution}
+${templateData.contribution}
 
 ## Test Instructions
-${test}
+${templateData.test}
 
 ## Questions?
 Feel free to view my GitHub profile and contact me via email for any additional questions!
-${github}
-${email}
+${templateData.github}
+${templateData.email}
     `;
+
 };
 
-module.exports = generateReadMe;
