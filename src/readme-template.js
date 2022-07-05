@@ -34,9 +34,10 @@ ${templateData.contribution}
 ${templateData.test}
 
 ### Questions
-Feel free to view my GitHub profile and contact me via email for any additional questions!
-${templateData.github}
-${templateData.email}
+Feel free to view my GitHub profile and contact me via email for any additional questions!  
+GitHub Username: ${templateData.github}  
+<a href="https://github.com/${templateData.github}">Link to GitHub Profile</a>  
+Email: ${templateData.email}  
     `;
 
 };

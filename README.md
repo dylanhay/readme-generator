@@ -1,5 +1,5 @@
 
-# proj3
+# proj6
 
 ## Table of Contents
 * [Description](#description)
@@ -11,25 +11,26 @@
 * [Questions](#questions)
     
 ### Description
-desc3
+desc6
 
 ### License
 
 
 ### Installation Instructions
-inst3
+inst6
 
 ### Usage Information
-usage3
+use6
 
 ### Contribution Guidelines
-cont3
+cont6
 
 ### Test Instructions
-test3
+test6
 
 ### Questions
-Feel free to view my GitHub profile and contact me via email for any additional questions!
-user3
-em3
+Feel free to view my GitHub profile and contact me via email for any additional questions!  
+GitHub Username: user6  
+<a href="https://github.com/user6">Link to GitHub Profile</a>  
+Email: em6  
     
