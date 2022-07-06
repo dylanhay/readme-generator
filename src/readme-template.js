@@ -23,83 +23,66 @@ var licenseLinkArr = [
 ];
 
 
-// if (licenseText == 'Apache License 2.0') {
-//     return licenseBadgeArr[0];
-// }
-
-
-function renderLicenseSection(licenseText) {
+function renderLicenseBadge(licenseText) {
     if (licenseText == 'Apache License 2.0') {
-        return `
-        ${licenseBadgeArr[0]}  
-
-        ${licenseLinkArr[0]}
-        `
-        ;
+        return licenseBadgeArr[0];
     }
     if (licenseText == 'BSD 3-Clause License') {
-        return `
-        ${licenseBadgeArr[1]}  
-
-        ${licenseLinkArr[1]}
-        `
-        ;
+        return licenseBadgeArr[1];
     }
     if (licenseText == 'BSD 2-Clause License') {
-        return `
-        ${licenseBadgeArr[2]}  
-
-        ${licenseLinkArr[2]}
-        `
-        ;
+        return licenseBadgeArr[2];
     }
     if (licenseText == 'Eclipse Public License 1.0') {
-        return `
-        ${licenseBadgeArr[3]}  
-
-        ${licenseLinkArr[3]}
-        `
-        ;
+        return licenseBadgeArr[3];
     }
     if (licenseText == 'GPL v3 License') {
-        return `
-        ${licenseBadgeArr[4]}  
-
-        ${licenseLinkArr[4]}
-        `
-        ;
+        return licenseBadgeArr[4];
     }
     if (licenseText == 'GPL v2 License') {
-        return `
-        ${licenseBadgeArr[5]}  
-
-        ${licenseLinkArr[5]}
-        `
-        ;
+        return licenseBadgeArr[5];
     }
     if (licenseText == 'LGPL v3 License') {
-        return `
-        ${licenseBadgeArr[6]}  
-
-        ${licenseLinkArr[6]}
-        `
-        ;
+        return licenseBadgeArr[6];
     }
     if (licenseText == 'MIT License') {
-        return `
-        ${licenseBadgeArr[7]}  
-
-        ${licenseLinkArr[7]}
-        `
-        ;
+        return licenseBadgeArr[7];
     }
     if (licenseText == 'Mozilla Public License 2.0') {
-        return `
-        ${licenseBadgeArr[8]}  
-        
-        ${licenseLinkArr[8]}
-        `
-        ;
+        return licenseBadgeArr[8];
+    }
+    else {
+        return '';
+      }
+};
+
+function renderLicenseLink(licenseText) {
+    if (licenseText == 'Apache License 2.0') {
+        return licenseLinkArr[0];
+    }
+    if (licenseText == 'BSD 3-Clause License') {
+        return licenseLinkArr[1];
+    }
+    if (licenseText == 'BSD 2-Clause License') {
+        return licenseLinkArr[2];
+    }
+    if (licenseText == 'Eclipse Public License 1.0') {
+        return licenseLinkArr[3];
+    }
+    if (licenseText == 'GPL v3 License') {
+        return licenseLinkArr[4];
+    }
+    if (licenseText == 'GPL v2 License') {
+        return licenseLinkArr[5];
+    }
+    if (licenseText == 'LGPL v3 License') {
+        return licenseLinkArr[6];
+    }
+    if (licenseText == 'MIT License') {
+        return licenseLinkArr[7];
+    }
+    if (licenseText == 'Mozilla Public License 2.0') {
+        return licenseLinkArr[8];
     }
     else {
         return '';
@@ -107,37 +90,9 @@ function renderLicenseSection(licenseText) {
 };
 
 
-
-// function renderLicenseLink(licenseText) {    
-//     if (licenseText == 'MIT License') {
-//         return licenseLinkArr[0];
-//     }
-//     if (licenseText == 'Apache License 2.0') {
-//         return licenseLinkArr[1];
-//     }
-//     if (licenseText == 'BSD 3-Clause License') {
-//         return licenseLinkArr[2];
-//     }
-//     if (licenseText == 'GPLv3 License') {
-//         return licenseLinkArr[3];
-//     }
-//     if (licenseText == 'Mozilla Public License 2.0') {
-//         return licenseLinkArr[4];
-//     }
-//     else {
-//         return '';
-//       }
-//   };
-
-
-
 module.exports = templateData => {
 
 const { license, ...rest } = templateData;
-
-// console.log(licenseBadgeArr[0]);
-// console.log(templateData);
-// console.log(templateData.title);
 
 return `
 # ${templateData.title}
@@ -155,7 +110,8 @@ return `
 ${templateData.description}
 
 ### License
-${renderLicenseSection(license)}  
+${renderLicenseBadge(license)}  
+${renderLicenseLink(license)}
 
 ### Installation Instructions
 ${templateData.install}
