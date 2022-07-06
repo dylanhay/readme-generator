@@ -40,11 +40,11 @@ var licenseChoiceArr = [
 //function renders license badge
 function renderLicenseBadge(licenseText) {
     for (let i=0; i<licenseChoiceArr.length; i++){
-        if (licenseText[0] == licenseChoiceArr[i]) {
-            return licenseBadgeArr[i];
-        }
         if (licenseText.length === 0) {
             return '';
+        }
+        if (licenseText[0] == licenseChoiceArr[i]) {
+            return licenseBadgeArr[i];
         }
     };
 };
@@ -89,29 +89,28 @@ ${renderLicenseBadge(license)}
 ${renderLicenseLink(license)}
 
 ## Table of Contents
-[Installation Instructions](#installation-instructions)  
-[Usage Information](#usage-information)  
-[Contribution Guidelines](#contribution-guidelines)  
-[Test Instructions](#test-instructions)  
+[Installation](#installation)  
+[Usage](#usage)  
+[Contributing](#contributing)  
+[Tests](#tests)  
 [Questions](#questions)  
 
-### Installation Instructions
+## Installation
 ${templateData.install}
 
-### Usage Information
+## Usage
 ${templateData.usage}
 
-### Contribution Guidelines
+## Contributing
 ${templateData.contribution}
 
-### Test Instructions
+## Tests
 ${templateData.test}
 
-### Questions
+## Questions
 Feel free to view my GitHub profile and contact me via email for any additional questions!  
+<a href="https://github.com/${templateData.github}">GitHub Profile</a>  
 GitHub Username: ${templateData.github}  
-<a href="https://github.com/${templateData.github}">Link to GitHub Profile</a>  
 Email: ${templateData.email}  
     `;
-
 };
