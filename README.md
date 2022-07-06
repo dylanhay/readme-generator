@@ -24,7 +24,7 @@ To run the application, enter "node index.js" in terminal
 * Markdown
 
 ## Walkthrough Video
-
+https://drive.google.com/file/d/1_AXUeK6M63cmOQ9x9Pxf_tHTvqd6makr/view
 
 ## Contribution
 Made with ❤️ by Dylan Hay
