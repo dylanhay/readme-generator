@@ -22,71 +22,49 @@ var licenseLinkArr = [
     "https://opensource.org/licenses/MPL-2.0"
 ];
 
+var licenseChoiceArr = [
+        "Apache License 2.0",
+        "BSD 3-Clause License",
+        "BSD 2-Clause License",
+        "Eclipse Public License 1.0",
+        "GPL v3 License",
+        "GPL v2 License",
+        "LGPL v3 License",
+        "MIT License",
+        "Mozilla Public License 2.0"
+];
+
 
 function renderLicenseBadge(licenseText) {
-    if (licenseText == 'Apache License 2.0') {
-        return licenseBadgeArr[0];
-    }
-    if (licenseText == 'BSD 3-Clause License') {
-        return licenseBadgeArr[1];
-    }
-    if (licenseText == 'BSD 2-Clause License') {
-        return licenseBadgeArr[2];
-    }
-    if (licenseText == 'Eclipse Public License 1.0') {
-        return licenseBadgeArr[3];
-    }
-    if (licenseText == 'GPL v3 License') {
-        return licenseBadgeArr[4];
-    }
-    if (licenseText == 'GPL v2 License') {
-        return licenseBadgeArr[5];
-    }
-    if (licenseText == 'LGPL v3 License') {
-        return licenseBadgeArr[6];
-    }
-    if (licenseText == 'MIT License') {
-        return licenseBadgeArr[7];
-    }
-    if (licenseText == 'Mozilla Public License 2.0') {
-        return licenseBadgeArr[8];
-    }
-    else {
-        return '';
-      }
+    for (let i=0; i<licenseChoiceArr.length; i++){
+        if (licenseText[0] == licenseChoiceArr[i]) {
+            return licenseBadgeArr[i];
+        }
+        if (licenseText.length === 0) {
+            return '';
+        }
+    };
 };
 
 function renderLicenseLink(licenseText) {
-    if (licenseText == 'Apache License 2.0') {
-        return licenseLinkArr[0];
-    }
-    if (licenseText == 'BSD 3-Clause License') {
-        return licenseLinkArr[1];
-    }
-    if (licenseText == 'BSD 2-Clause License') {
-        return licenseLinkArr[2];
-    }
-    if (licenseText == 'Eclipse Public License 1.0') {
-        return licenseLinkArr[3];
-    }
-    if (licenseText == 'GPL v3 License') {
-        return licenseLinkArr[4];
-    }
-    if (licenseText == 'GPL v2 License') {
-        return licenseLinkArr[5];
-    }
-    if (licenseText == 'LGPL v3 License') {
-        return licenseLinkArr[6];
-    }
-    if (licenseText == 'MIT License') {
-        return licenseLinkArr[7];
-    }
-    if (licenseText == 'Mozilla Public License 2.0') {
-        return licenseLinkArr[8];
-    }
-    else {
+    for (let i=0; i<licenseChoiceArr.length; i++){
+        if (licenseText[0] == licenseChoiceArr[i]) {
+            return licenseLinkArr[i];
+        }
+        if (licenseText.length === 0) {
+            return '';
+        }
+    };
+};
+
+function renderLicenseSection(licenseText){
+    if (licenseText.length === 0) {
         return '';
-      }
+    }
+    return ` 
+## License  
+This application is covered under the following license. Please review the link below for additional information pertaining to the license.
+    `;
 };
 
 
@@ -97,21 +75,19 @@ const { license, ...rest } = templateData;
 return `
 # ${templateData.title}
 
-## Table of Contents
-* [Description](#description)
-* [License](#license)
-* [Installation Instructions](#installation-instructions)
-* [Usage Information](#usage-information)
-* [Contribution Guidelines](#contribution-guidelines)
-* [Test Instructions](#test-instructions)
-* [Questions](#questions)
-    
-### Description
+## Description
 ${templateData.description}
 
-### License
+${renderLicenseSection(license)}
 ${renderLicenseBadge(license)}  
 ${renderLicenseLink(license)}
+
+## Table of Contents
+[Installation Instructions](#installation-instructions)  
+[Usage Information](#usage-information)  
+[Contribution Guidelines](#contribution-guidelines)  
+[Test Instructions](#test-instructions)  
+[Questions](#questions)  
 
 ### Installation Instructions
 ${templateData.install}
@@ -133,4 +109,3 @@ Email: ${templateData.email}
     `;
 
 };
-

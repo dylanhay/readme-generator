@@ -1,18 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateReadMe = require('./src/readme-template.js');
-// const mockData = {
-//   title: 'proj1',
-//   description: 'desc1',
-//   install: 'inst1',
-//   usage: 'use1',
-//   contribution: 'cont1',
-//   test: 'test1',
-//   license: [ 'ISC' ],
-//   github: 'gitty',
-//   email: 'emmy'
-// }
-
 
 const promptProject = (readmeData) => {
     console.log(`
