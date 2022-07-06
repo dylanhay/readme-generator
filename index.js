@@ -105,9 +105,15 @@ const promptProject = (readmeData) => {
           name: "license",
           message: "What license did you build this project with?",
           choices: [
-            "ISC",
-            "MIT",
-            "BSD",
+            "Apache License 2.0",
+            "BSD 3-Clause License",
+            "BSD 2-Clause License",
+            "Eclipse Public License 1.0",
+            "GPL v3 License",
+            "GPL v2 License",
+            "LGPL v3 License",
+            "MIT License",
+            "Mozilla Public License 2.0"
           ],
         },
         {
