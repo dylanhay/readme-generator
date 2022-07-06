@@ -1,7 +1,11 @@
+//packages for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+
+//link to generateReadMe function contained in file in source folder
 const generateReadMe = require('./src/readme-template.js');
 
+//prompt function
 const promptProject = (readmeData) => {
     console.log(`
     ==================================================================
@@ -135,6 +139,7 @@ const promptProject = (readmeData) => {
 
   };
   
+  //prompt function call => README is generated and written
   promptProject()
     .then(readmeData => {
       const pageREADME = generateReadMe(readmeData);

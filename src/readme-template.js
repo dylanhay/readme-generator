@@ -1,3 +1,4 @@
+//array of license badges
 var licenseBadgeArr = [
     "![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)",
     "![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)",
@@ -10,6 +11,7 @@ var licenseBadgeArr = [
     "![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)"
 ];
 
+//array of license links
 var licenseLinkArr = [
     "https://opensource.org/licenses/Apache-2.0",
     "https://opensource.org/licenses/BSD-3-Clause",
@@ -22,6 +24,7 @@ var licenseLinkArr = [
     "https://opensource.org/licenses/MPL-2.0"
 ];
 
+//array of license choices
 var licenseChoiceArr = [
         "Apache License 2.0",
         "BSD 3-Clause License",
@@ -34,7 +37,7 @@ var licenseChoiceArr = [
         "Mozilla Public License 2.0"
 ];
 
-
+//function renders license badge
 function renderLicenseBadge(licenseText) {
     for (let i=0; i<licenseChoiceArr.length; i++){
         if (licenseText[0] == licenseChoiceArr[i]) {
@@ -46,6 +49,7 @@ function renderLicenseBadge(licenseText) {
     };
 };
 
+//function renders license link
 function renderLicenseLink(licenseText) {
     for (let i=0; i<licenseChoiceArr.length; i++){
         if (licenseText[0] == licenseChoiceArr[i]) {
@@ -57,6 +61,8 @@ function renderLicenseLink(licenseText) {
     };
 };
 
+//function renders license section (header and info)
+//function returns empty section if there is no license for project
 function renderLicenseSection(licenseText){
     if (licenseText.length === 0) {
         return '';
@@ -67,7 +73,7 @@ This application is covered under the following license. Please review the link 
     `;
 };
 
-
+//function generates markdown for README
 module.exports = templateData => {
 
 const { license, ...rest } = templateData;
