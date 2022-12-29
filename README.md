@@ -11,7 +11,7 @@ https://opensource.org/licenses/MIT
 
 ## Table of Contents
 [Built With](#built-with)  
-[Installation](#installation-instructions)  
+[Installation](#installation)  
 [Walkthrough Video](#walkthrough-video)  
 [Contribution](#contribution) 
 
