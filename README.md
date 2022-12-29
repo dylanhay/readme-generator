@@ -11,7 +11,7 @@ https://opensource.org/licenses/MIT
 
 ## Table of Contents
 [Built With](#built-with)  
-[Installation Instructions](#installation-instructions)  
+[Installation](#installation-instructions)  
 [Walkthrough Video](#walkthrough-video)  
 [Contribution](#contribution) 
 
@@ -21,7 +21,7 @@ https://opensource.org/licenses/MIT
 * Inquirer
 * Git
 
-## Installation Instructions
+## Installation
 To run locally once cloned:
 * Enter `npm install` in the command line while in the root folder to install the required npm packages
 * Enter `node index.js` in the command line while in the root folder to run the application
