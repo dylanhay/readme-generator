@@ -3,6 +3,12 @@
 ## Description
 An application that generates a professional README based on user specified criteria.
 
+## License  
+This application is covered under the following license. Please review the link below for additional information pertaining to the license.
+    
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)  
+https://opensource.org/licenses/MIT
+
 ## Table of Contents
 [Built With](#built-with)  
 [Installation Instructions](#installation-instructions)  
