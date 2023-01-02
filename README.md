@@ -23,8 +23,8 @@ https://opensource.org/licenses/MIT
 
 ## Installation
 To run locally once cloned:
-* Enter `npm install` in the command line while in the root folder to install the required npm packages
-* Enter `node index.js` in the command line while in the root folder to run the application
+* Enter `npm install` in the CLI to install the required npm packages
+* Enter `node index.js` in the CLI to run the application
 
 ## Walkthrough Video
 https://drive.google.com/file/d/1_AXUeK6M63cmOQ9x9Pxf_tHTvqd6makr/view
